@@ -29,7 +29,7 @@
         "REGBOX_AMOUNT": 100,
         "NOTIFICATION_DISPLAY": true,
         "ALERT_UPDATE": true,
-        "REPLIT": false,
+        "REPLIT": false
     },
     "GBOTWAR_CONFIG": {
         "OTP_KEY": "",
