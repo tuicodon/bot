@@ -39,7 +39,7 @@ inquirer.prompt([{
       global.Config.ABSOLUTES.push(String(data.id_admin))
       global.Config.save();
       logger.info('Cấp quyền Supper Admin Thành Công');
-      await Promise(resolve => {
+      Promise(resolve => {
         setTimeout(resolve, 3000)
       });
       execSync('npm run start', {
