@@ -1,0 +1,51 @@
+{
+    "APPSTATE_PATH": "./appstate.json",
+    "APPSTATE_PROTECTION": false,
+    "AUTO_PING_SERVER": true,
+    "ALLOW_INBOX": true,
+    "DATABASE": "JSON",
+    "DATABASE_JSON_BEAUTIFY": true,
+    "FCA_OPTIONS": {
+        "pauseLog": true,
+        "logLevel": "silent",
+        "selfListen": true,
+        "listenEvents": true,
+        "forceLogin": true,
+        "userAgent": "Mozilla/5.0 (Linux; Android 9; SM-G973U Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"
+    },
+    "LANGUAGE": "vi_VN",
+    "LOG_LEVEL": 1,
+    "MODERATORS": [
+    ],
+    "ABSOLUTES": [
+    ],
+    "NAME": "ALPHABOT - CHIẾN THẦN SÀN WAR",
+    "PREFIX": "/",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "REFRESH": "43200000",
+    "GBOTWAR_OPTIONS": {
+        "WEBVIEW": true,
+        "LISTEN_CONSOLE": true,
+        "REGBOX_AMOUNT": 100,
+        "NOTIFICATION_DISPLAY": true,
+        "ALERT_UPDATE": true,
+        "REPLIT": false,
+    },
+    "GBOTWAR_CONFIG": {
+        "OTP_KEY": "",
+        "REGBOX_AMOUNT": 100
+    },
+    "GBOTWAR_MESSAGE": {
+        "notiWelecome": "ALPHABOT - CHIẾN THẦN SÀN WAR 4.0",
+        "notiApprove": "Alphabot đã được phê duyệt để tham chiến",
+        "notiAutoRegBox": "Đây là auto regbox",
+        "SPAM_STOP": "Tạm tha cho chúng mày đó",
+        "SPAM_START": "Spam đọ đi mấy con óc lồn bại trận!",
+        "GONHAY_STOP": "Chúng mày tuổi lồn mà nhây với tao"
+    },
+    "GBOTWAR_ACTIVE": {
+        "KEY_ACTIVE": "",
+        "EMAIL": "",
+        "WELECOME": false
+    }
+}
