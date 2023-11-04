@@ -8,7 +8,7 @@ import {
   statSync,
   rmSync
 } from 'fs';
-import logger from './src/core/helpers/console.js';
+import logger from './System/Core/helpers/console.js';
 import {
   resolve,
   dirname
@@ -18,8 +18,8 @@ import {
   createInterface
 } from 'readline';
 
-const baseURL = "https://raw.githubusercontent.com/nhatcoder2003/Gbot-War-V2/main";
-const allVersionsURL = "https://raw.githubusercontent.com/nhatcoder2003/GbotWarServer/main/version.json";
+const baseURL = "https://raw.githubusercontent.com/nhatcoder2003/Alphabot/main";
+const allVersionsURL = "https://raw.githubusercontent.com/nhatcoder2003/AlphabotServer/main/version.json";
 
 
 const checkUpdate = async () => {
@@ -34,7 +34,7 @@ const checkUpdate = async () => {
     const newVersionIndex = Object.entries(data).findIndex(([versionFrom,]) => versionFrom == currentVersion);
     if (newVersionIndex != -1) {
       for (const [, versionAfter] of Object.entries(data).slice(newVersionIndex)) {
-        const scriptsURL = `https://raw.githubusercontent.com/nhatcoder2003/GbotWarServer/main/UPDATE/${versionAfter}.json`;
+        const scriptsURL = `https://raw.githubusercontent.com/nhatcoder2003/AlphabotServer/main/UPDATE/${versionAfter}.json`;
         const scripts = (await axios.get(scriptsURL)).data;
 
         updateScriptsArr.push(scripts);
@@ -298,7 +298,7 @@ const main = async () => {
           update(mergedScripts, newPackage);
         } else {
           rl.close();
-          logger.warn("Gbot will not be updated.");
+          logger.warn("Alphabot will not be updated.");
         }
       })
     }
