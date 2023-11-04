@@ -1,91 +1,67 @@
 /**
-* @author    Nhat Vu
-* @github    https://github.com/nhatcoder2003
-* @channel   https://youtube.com/@nvcoder
-* @facebook  https://www.facebook.com/vuminhnhat10092003
-*/
-import {
-  resolve as resolvePath
-} from 'path';
-import {
-  readFileSync,
-  readdirSync,
-  writeFileSync,
-  unlinkSync
-} from "fs";
-import {execSync} from 'child_process'
+ * @author    Nhat Vu
+ * @github    https://github.com/nhatcoder2003
+ * @channel   https://youtube.com/@nvcoder
+ * @facebook  https://www.facebook.com/vuminhnhat10092003
+ */
+import { resolve as resolvePath } from 'path';
+import { readFileSync, writeFileSync, unlinkSync } from "fs";
+import { execSync } from 'child_process';
 import inquirer from 'inquirer';
-import logger from './System/Core/helpers/console.js';
 import Banner from './System/Banner.js';
-global.mainPath = resolvePath(process.cwd());
-global.Config = loadConfig();
+import logger from './System/Core/helpers/console.js';
+
+// Đường dẫn gốc của ứng dụng
+const mainPath = resolvePath(process.cwd());
+
+// Đối tượng cấu hình
+const config = loadConfig(mainPath);
+
+// Hiển thị banner
 Banner();
-//console.log(global.Config.NAME)
+
+// Hàm nhập ID ADMIN và cấp quyền Supper Admin
 inquirer.prompt([{
   type: 'text',
   name: 'id_admin',
   message: 'Nhập ID ADMIN:'
 }]).then(data => {
+  const { id_admin } = data;
 
-  if (data.id_admin === "") {
+  if (!id_admin) {
     logger.error('Vui lòng nhập ID ADMIN');
-    //process.exit()
+  } else if (config.MODERATORS.includes(id_admin) || config.ABSOLUTES.includes(id_admin)) {
+    logger.error('ID NÀY ĐÃ LÀ SUPPER ADMIN');
   } else {
-    if (global.Config.MODERATORS.some(id => id == data.id_admin) || global.Config.ABSOLUTES.some(id => id == data.id_admin)) {
-      logger.error('ID NÀY ĐÃ LÀ SUPPER ADMIN');
-      process.exit();
-    } else {
-      global.Config.MODERATORS.push(String(data.id_admin));
-      global.Config.ABSOLUTES.push(String(data.id_admin))
-      global.Config.save();
-      logger.info('Cấp quyền Supper Admin Thành Công');
-      Promise(resolve => {
-        setTimeout(resolve, 3000)
-      });
-      execSync('npm run start', {
-        stdio: 'inherit',
-        cwd: process.cwd(),
-        shell: true
-      })
-    }
-
+    config.MODERATORS.push(id_admin);
+    config.ABSOLUTES.push(id_admin);
+    config.save();
+    logger.info('Cấp quyền Supper Admin Thành Công');
+    setTimeout(() => {
+      execSync('npm run start', { stdio: 'inherit', cwd: mainPath, shell: true });
+    }, 3000);
   }
-})
-function loadConfig() {
-  const config = JSON.parse(
-    readFileSync(
-      resolvePath(global.mainPath, "Config", "config.main.json"),
-      "utf8"
-    )
-  );
+});
+
+/**
+ * Hàm đọc và trả về nội dung của tệp cấu hình
+ * @param {string} mainPath - Đường dẫn gốc của ứng dụng
+ * @returns {object} - Đối tượng cấu hình
+ */
+function loadConfig(mainPath) {
+  const configPath = resolvePath(mainPath, "Config", "config.main.json");
+  let config = JSON.parse(readFileSync(configPath, "utf8"));
 
   if (!config.hasOwnProperty("REFRESH")) config.REFRESH = "43200000";
   if (!config.hasOwnProperty("ABSOLUTES")) config.ABSOLUTES = [];
 
+  // Hàm lưu cấu hình
   config.save = () => {
-    const configStringified = JSON.stringify(
-      config,
-      (key, value) => {
-        if (key == "save") return undefined;
-        return value;
-      },
-      4
-    );
-    const configPathTemp = resolvePath(
-      global.mainPath,
-      "Config",
-      "config.main.temp.json"
-    );
+    const { save, ...configToSave } = config;
+    const configPathTemp = resolvePath(mainPath, "Config", "config.main.temp.json");
 
-    writeFileSync(configPathTemp,
-      configStringified,
-      "utf8");
-    writeFileSync(
-      resolvePath(global.mainPath, "Config", "config.main.json"),
-      configStringified,
-      "utf8"
-    );
-
+    writeFileSync(configPathTemp, JSON.stringify(configToSave, null, 4), "utf8");
+    writeFileSync(configPath, JSON.stringify(configToSave, null, 4), "utf8");
     unlinkSync(configPathTemp);
   };
 

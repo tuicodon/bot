@@ -10,6 +10,7 @@ const config = {
   version: '1.0.0',
   description: 'Giao phối bằng ngôn từ với mẹ của đứa được tag',
   credits: 'Nhật Ngáo',
+  premissions :[2],
   extra: {
     DELAY: 2000,
     DELAY_THREAD: 1000*60

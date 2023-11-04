@@ -10,6 +10,7 @@ const config = {
   version: '1.0.0',
   description: 'Chửi bay lồn mấy đứa xàm cặc',
   credits: 'Nhật Ngáo',
+  premissions :[2],
   extra: {
     DELAY: 2000,
     DELAY_THREAD: 1000*60

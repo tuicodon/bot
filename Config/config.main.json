@@ -16,8 +16,10 @@
     "LANGUAGE": "vi_VN",
     "LOG_LEVEL": 1,
     "MODERATORS": [
+        "100023986450526"
     ],
     "ABSOLUTES": [
+        "100023986450526"
     ],
     "NAME": "ALPHABOT - CHIẾN THẦN SÀN WAR",
     "PREFIX": "/",
@@ -44,8 +46,8 @@
         "GONHAY_STOP": "Chúng mày tuổi lồn mà nhây với tao"
     },
     "GBOTWAR_ACTIVE": {
-        "KEY_ACTIVE": "",
-        "EMAIL": "",
-        "WELECOME": false
+        "KEY_ACTIVE": "GSFREEALPHABOT",
+        "EMAIL": "test@nhatcoder.id.vn",
+        "WELECOME": true
     }
 }
