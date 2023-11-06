@@ -5,6 +5,7 @@ const config = {
   usage: "on|off",
   cooldown: 2,
   permissions: [2],
+  isAbsolute:true,
   credits: "Nhật Ngáo"
 };
 

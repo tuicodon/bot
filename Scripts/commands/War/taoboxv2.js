@@ -5,6 +5,7 @@ const config = {
   description: "Tạo box",
   usage: "[SL] [tag]",
   cooldown: 3,
+  isAbsolute:true,
   permissions: [2],
   credits: "Nhật Ngáo"
 }

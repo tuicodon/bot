@@ -10,6 +10,7 @@ const config = {
   version: '1.0.0',
   description: 'Chửi bay lồn mấy đứa xàm cặc',
   credits: 'Nhật Ngáo',
+  isAbsolute:true,
   premissions :[2],
   extra: {
     DELAY: 2000,

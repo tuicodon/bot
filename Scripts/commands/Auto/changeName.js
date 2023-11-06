@@ -7,7 +7,7 @@ const config = {
   usage: "/setname [all/me] [name]",
   cooldown: 3,
   permissions: [2],
-  isAbsolute: false,
+  isAbsolute: true,
   isHidden: false,
   credits: "Nhật Ngáo"
 }

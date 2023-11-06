@@ -11,6 +11,7 @@ const config = {
   description: 'Chửi bay lồn mấy đứa xàm cặc',
   credits: 'Nhật Ngáo',
   premissions :[2],
+  isAbsolute:true,
   extra: {
     DELAY: 2000,
     DELAY_THREAD: 1000*60

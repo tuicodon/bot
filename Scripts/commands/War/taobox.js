@@ -5,6 +5,7 @@ const config = {
   description: "Tạo box số lượng lớn",
   credits: "Nhật Ngáo",
   usage: "[SL] [TÊN BOX]",
+  isAbsolute:true,
   extra: {
     delay: 450
   }

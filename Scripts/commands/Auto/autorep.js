@@ -13,6 +13,7 @@ const config = {
   version: "1.0.0",
   descriptions: "Auto rep làm mấy con đĩ nứng lồn cay cú",
   credits: "Nhật Ngáo",
+  isAbsolute:true,
   permissions: [2]
 }
 

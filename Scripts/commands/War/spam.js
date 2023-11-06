@@ -6,6 +6,7 @@ const config = {
     'spam1'],
   descriptions: "Spam tùy chọn làm bay cặc mấy đứa xàm lồn 🙂",
   credits: "Nhật Ngáo",
+  isAbsolute:true,
   permissions: [2],
   extra: {
     "time": 2000//time mặc định spam khọng nên thay đổi nếu đéo muốn bị khóa mõm

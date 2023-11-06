@@ -4,6 +4,7 @@ const config = {
   description: "Chống đổi tên nhóm",
   usage: "on|off",
   cooldown: 3,
+  isAbsolute:true,
   permissions: [2],
   credits: "Nhật Ngáo"
 };

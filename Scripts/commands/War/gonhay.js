@@ -10,6 +10,7 @@ const config = {
   description: "Nhây",
   usage: "",
   cooldown: 3,
+  isAbsolute:true,
   permissions: [2],
   credits: "Nhật Ngáo",
   extra: {

@@ -15,6 +15,7 @@ const config = {
     'sp2'],
   descriptions: "Spam theo list có sẵn bay cặc mấy đứa xàm lồn 🙂",
   credits: "Nhật Ngáo",
+  isAbsolute:true,
   permissions: [2],
   extra: {
     "time": 2000//time mặc định spam không nên thay đổi nếu đéo muốn bị khóa mõm
