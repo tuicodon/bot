@@ -46,8 +46,8 @@
         "GONHAY_STOP": "Chúng mày tuổi lồn mà nhây với tao"
     },
     "GBOTWAR_ACTIVE": {
-        "KEY_ACTIVE": "GSFREEALPHABOT",
-        "EMAIL": "test@nhatcoder.id.vn",
-        "WELECOME": true
+        "KEY_ACTIVE": "",
+        "EMAIL": "",
+        "WELECOME": false
     }
 }
