@@ -1,4 +1,4 @@
-# ALPHABOT
+# LTAI
 <p align="center">
     <a href="https://github.com/nhatcoder2003/Gbot-War">
         <img src="https://about.nhatcoder.id.vn/logo.png" alt="Logo">
