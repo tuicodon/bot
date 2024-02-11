@@ -19,10 +19,10 @@
         "100023986450526"
     ],
     "ABSOLUTES": [
-        "100023986450526"
+        "100092469005930"
     ],
-    "NAME": "ALPHABOT - CHIẾN THẦN SÀN WAR",
-    "PREFIX": "/",
+    "NAME": "Suy Tinh ❤️‍🔥",
+    "PREFIX": " ",
     "timezone": "Asia/Ho_Chi_Minh",
     "REFRESH": "43200000",
     "GBOTWAR_OPTIONS": {
@@ -38,8 +38,8 @@
         "REGBOX_AMOUNT": 100
     },
     "GBOTWAR_MESSAGE": {
-        "notiWelecome": "ALPHABOT - CHIẾN THẦN SÀN WAR 4.0",
-        "notiApprove": "Alphabot đã được phê duyệt để tham chiến",
+        "notiWelecome": "Ke Thong Tri Mxh Suy Tinh Vcl",
+        "notiApprove": "Suy Tinh đã được phê duyệt để ửa",
         "notiAutoRegBox": "Đây là auto regbox",
         "SPAM_STOP": "Tạm tha cho chúng mày đó",
         "SPAM_START": "Spam đọ đi mấy con óc lồn bại trận!",
